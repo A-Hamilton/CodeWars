@@ -2,15 +2,15 @@ public class Kata
 {
     public static int[] countPositivesSumNegatives(int[] input)
     {
-      int p = 0;
-      int n = 0;
-      for(int number : input){
-        if(number > 0){
+      if(input == null || input.length == 0 ) return new int[] {};
+      int p = 0, n = 0;
+      for(int i : input){
+        if(i > 0){  
           p++;
-        } else {
-          n += number;
-        }
+        } else if(i < 0) {
+          n += i;
+        } 
       }
-        return new int[] {p, n};
+      return input = new int[] {p, n};
     }
 }
